@@ -84,9 +84,12 @@
          Controls.Add(picLoading);
          Controls.Add(dgvResultados);
          Icon = (Icon) resources.GetObject("$this.Icon");
+         KeyPreview = true;
          Name = "frmPrincipal";
          StartPosition = FormStartPosition.CenterScreen;
          Text = "Proyecto Base - UCEMA";
+         Load += frmPrincipal_Load;
+         KeyDown += frmPrincipal_KeyDown;
          ((System.ComponentModel.ISupportInitialize) dgvResultados).EndInit();
          ((System.ComponentModel.ISupportInitialize) picLoading).EndInit();
          ResumeLayout(false);
