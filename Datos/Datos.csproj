@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="odp.net.x64" Version="112.3.20" />
-    <PackageReference Include="Oracle.ManagedDataAccess" Version="21.10.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.100" />
   </ItemGroup>
 
 </Project>

@@ -32,8 +32,9 @@
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
          dgvResultados = new DataGridView();
          picLoading = new PictureBox();
-         statusinformation = new StatusStrip();
+         statusInformation = new StatusStrip();
          dlgAbrirArchivo = new OpenFileDialog();
+         btnTestDB = new Button();
          ((System.ComponentModel.ISupportInitialize) dgvResultados).BeginInit();
          ((System.ComponentModel.ISupportInitialize) picLoading).BeginInit();
          SuspendLayout();
@@ -60,27 +61,40 @@
          // 
          picLoading.Anchor =  AnchorStyles.Top | AnchorStyles.Right;
          picLoading.Image = Proyecto_Base.NET7.Properties.Resources.loading;
-         picLoading.Location = new Point(751, 12);
+         picLoading.Location = new Point(751, 58);
          picLoading.Name = "picLoading";
          picLoading.Size = new Size(40, 40);
          picLoading.SizeMode = PictureBoxSizeMode.StretchImage;
          picLoading.TabIndex = 1;
          picLoading.TabStop = false;
+         picLoading.Visible = false;
          // 
-         // statusinformation
+         // statusInformation
          // 
-         statusinformation.Location = new Point(0, 444);
-         statusinformation.Name = "statusinformation";
-         statusinformation.Size = new Size(800, 22);
-         statusinformation.TabIndex = 2;
-         statusinformation.Text = "statusStrip1";
+         statusInformation.Location = new Point(0, 444);
+         statusInformation.Name = "statusInformation";
+         statusInformation.Size = new Size(800, 22);
+         statusInformation.TabIndex = 2;
+         statusInformation.Text = "statusStrip1";
+         // 
+         // btnTestDB
+         // 
+         btnTestDB.Anchor =  AnchorStyles.Top | AnchorStyles.Right;
+         btnTestDB.Location = new Point(751, 12);
+         btnTestDB.Name = "btnTestDB";
+         btnTestDB.Size = new Size(40, 40);
+         btnTestDB.TabIndex = 3;
+         btnTestDB.Text = "&DB";
+         btnTestDB.UseVisualStyleBackColor = true;
+         btnTestDB.Click += btnTestDB_Click;
          // 
          // frmPrincipal
          // 
          AutoScaleDimensions = new SizeF(7F, 15F);
          AutoScaleMode = AutoScaleMode.Font;
          ClientSize = new Size(800, 466);
-         Controls.Add(statusinformation);
+         Controls.Add(btnTestDB);
+         Controls.Add(statusInformation);
          Controls.Add(picLoading);
          Controls.Add(dgvResultados);
          Icon = (Icon) resources.GetObject("$this.Icon");
@@ -100,7 +114,8 @@
 
       private DataGridView dgvResultados;
       private PictureBox picLoading;
-      private StatusStrip statusinformation;
+      private StatusStrip statusInformation;
       private OpenFileDialog dlgAbrirArchivo;
+      private Button btnTestDB;
    }
 }
