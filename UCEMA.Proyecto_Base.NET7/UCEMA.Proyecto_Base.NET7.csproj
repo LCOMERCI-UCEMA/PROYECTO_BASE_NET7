@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows7.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>True</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
-    <StartupObject>UCEMA.Imputar_Pago.NET7.Program</StartupObject>
+    <StartupObject>UCEMA.Proyecto_Base.NET7.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

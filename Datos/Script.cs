@@ -43,9 +43,7 @@ namespace Datos
       {
          DataTable dt = new DataTable();
 
-         //using (OracleConnection con = new OracleConnection(Conexion.StrConexion()))
-         string conexion = @"Data Source=( DESCRIPTION=( ADDRESS= (PROTOCOL=TCP) (HOST=neptuno.ucema.edu.ar) (PORT=1521) )( CONNECT_DATA= (SERVICE_NAME=cema.ucema.edu.ar) ) );User Id=UCEMADEV;Password=ucema49585!;";
-         using (OracleConnection con = new OracleConnection(conexion))
+         using (OracleConnection con = new OracleConnection(Conexion.StrConexion()))
          {
             con.Open();
             using (OracleCommand cmd = con.CreateCommand())
